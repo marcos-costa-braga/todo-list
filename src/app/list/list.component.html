@@ -1,0 +1,14 @@
+<div class="container-fluid" style="max-width: 800px;">
+  <h1 style="text-align: center;">ToDo List</h1>
+  <div class="form d-flex">
+    <input type="text" class="form-control" [(ngModel)]="item">
+    <button type="submit" class="btn btn-primary" (click)="createItem()">Criar</button>
+  </div>
+  <ul class="well" style="list-style-type: none; margin: 10px;">
+    <li *ngFor="let listItem of list">
+      <mat-checkbox color="primary" style="text-decoration: line-through;">
+        {{listItem}}
+      </mat-checkbox>
+    </li>
+  </ul>
+</div>
